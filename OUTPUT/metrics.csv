@@ -1,0 +1,5 @@
+SolidityFile;ContractName;Type;SLOC;CLOC;McCC;NOS;CBO;DIT
+Ballot.SOL;Ballot;contract;151;60;9;4;0;0
+BlindAuction.SOL;BlindAuction;contract;158;38;13;11;0;0
+Purchase.SOL;Purchase;contract;120;29;4;19;0;0
+ReceiverPays.SOL;ReceiverPays;contract;60;7;5;0;0;0

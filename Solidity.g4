@@ -54,6 +54,7 @@ parteDiContratto
   | definizioneCostruttore
   | definizioneModifier
   | definizioneFunzione
+  | definizioneErrore
   | definizioneEvento
   | definizioneEnum ;
 
@@ -81,6 +82,9 @@ invocazioneModifier
 definizioneFunzione
   : 'function' identificatore? listaParametri listaModifier valoreRitorno? ( ';' | block ) ;
 
+definizioneErrore
+  : 'error' identificatore? listaParametri ';' ;
+  
 valoreRitorno
   : 'returns' listaParametri ;
 
@@ -432,10 +436,10 @@ WS
   : [ \t\r\n\u000C]+ -> skip ;
 
 COMMENTO
-  : '/*' .*? '*/' -> channel(HIDDEN) ;
+  : '/*' .*? '*/' -> skip ;
 
 COMMENTO_LINEA
-  : '//' ~[\r\n]* -> channel(HIDDEN) ;
+  : '//' ~[\r\n]* -> skip ;
 //----------------------------------------------------//
 
 //---------------------------------------------------------------------------------------//

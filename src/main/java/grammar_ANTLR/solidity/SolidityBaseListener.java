@@ -1,7 +1,6 @@
-// Generated from Solidity.g4 by ANTLR 4.4
+// Generated from Solidity.g4 by ANTLR 4.7.1
 package grammar_ANTLR.solidity;
 import org.antlr.v4.runtime.ParserRuleContext;
-import org.antlr.v4.runtime.misc.NotNull;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
@@ -16,900 +15,912 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	public void enterChiamataFunzione(@NotNull SolidityParser.ChiamataFunzioneContext ctx) { }
+	@Override public void enterSourceUnit(SolidityParser.SourceUnitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitChiamataFunzione(@NotNull SolidityParser.ChiamataFunzioneContext ctx) { }
+	@Override public void exitSourceUnit(SolidityParser.SourceUnitContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDichiarazioneVariabileStatement(@NotNull SolidityParser.DichiarazioneVariabileStatementContext ctx) { }
+	@Override public void enterPragma(SolidityParser.PragmaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDichiarazioneVariabileStatement(@NotNull SolidityParser.DichiarazioneVariabileStatementContext ctx) { }
+	@Override public void exitPragma(SolidityParser.PragmaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterStateMutability(@NotNull SolidityParser.StateMutabilityContext ctx) { }
+	@Override public void enterNomePragma(SolidityParser.NomePragmaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitStateMutability(@NotNull SolidityParser.StateMutabilityContext ctx) { }
+	@Override public void exitNomePragma(SolidityParser.NomePragmaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterValoreNumerico(@NotNull SolidityParser.ValoreNumericoContext ctx) { }
+	@Override public void enterValorePragma(SolidityParser.ValorePragmaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitValoreNumerico(@NotNull SolidityParser.ValoreNumericoContext ctx) { }
+	@Override public void exitValorePragma(SolidityParser.ValorePragmaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterParametroFunzione(@NotNull SolidityParser.ParametroFunzioneContext ctx) { }
+	@Override public void enterVersione(SolidityParser.VersioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitParametroFunzione(@NotNull SolidityParser.ParametroFunzioneContext ctx) { }
+	@Override public void exitVersione(SolidityParser.VersioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterUsingForDeclaration(@NotNull SolidityParser.UsingForDeclarationContext ctx) { }
+	@Override public void enterOperatoreVersione(SolidityParser.OperatoreVersioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitUsingForDeclaration(@NotNull SolidityParser.UsingForDeclarationContext ctx) { }
+	@Override public void exitOperatoreVersione(SolidityParser.OperatoreVersioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterValoreEnum(@NotNull SolidityParser.ValoreEnumContext ctx) { }
+	@Override public void enterVincoloVersione(SolidityParser.VincoloVersioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitValoreEnum(@NotNull SolidityParser.ValoreEnumContext ctx) { }
+	@Override public void exitVincoloVersione(SolidityParser.VincoloVersioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterTupleExpression(@NotNull SolidityParser.TupleExpressionContext ctx) { }
+	@Override public void enterDichiarazioneImport(SolidityParser.DichiarazioneImportContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitTupleExpression(@NotNull SolidityParser.TupleExpressionContext ctx) { }
+	@Override public void exitDichiarazioneImport(SolidityParser.DichiarazioneImportContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterOperatoriAssegnazione(@NotNull SolidityParser.OperatoriAssegnazioneContext ctx) { }
+	@Override public void enterImports(SolidityParser.ImportsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitOperatoriAssegnazione(@NotNull SolidityParser.OperatoriAssegnazioneContext ctx) { }
+	@Override public void exitImports(SolidityParser.ImportsContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterBlock(@NotNull SolidityParser.BlockContext ctx) { }
+	@Override public void enterDefinizioneContratto(SolidityParser.DefinizioneContrattoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitBlock(@NotNull SolidityParser.BlockContext ctx) { }
+	@Override public void exitDefinizioneContratto(SolidityParser.DefinizioneContrattoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterExpressionStatement(@NotNull SolidityParser.ExpressionStatementContext ctx) { }
+	@Override public void enterInheritanceSpecifier(SolidityParser.InheritanceSpecifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitExpressionStatement(@NotNull SolidityParser.ExpressionStatementContext ctx) { }
+	@Override public void exitInheritanceSpecifier(SolidityParser.InheritanceSpecifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDoWhileStatement(@NotNull SolidityParser.DoWhileStatementContext ctx) { }
+	@Override public void enterParteDiContratto(SolidityParser.ParteDiContrattoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDoWhileStatement(@NotNull SolidityParser.DoWhileStatementContext ctx) { }
+	@Override public void exitParteDiContratto(SolidityParser.ParteDiContrattoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterAssegnazioneVariabile(@NotNull SolidityParser.AssegnazioneVariabileContext ctx) { }
+	@Override public void enterAssegnazioneVariabile(SolidityParser.AssegnazioneVariabileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitAssegnazioneVariabile(@NotNull SolidityParser.AssegnazioneVariabileContext ctx) { }
+	@Override public void exitAssegnazioneVariabile(SolidityParser.AssegnazioneVariabileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterTipoStorage(@NotNull SolidityParser.TipoStorageContext ctx) { }
+	@Override public void enterUsingForDeclaration(SolidityParser.UsingForDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitTipoStorage(@NotNull SolidityParser.TipoStorageContext ctx) { }
+	@Override public void exitUsingForDeclaration(SolidityParser.UsingForDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneFunzione(@NotNull SolidityParser.DefinizioneFunzioneContext ctx) { }
+	@Override public void enterDefinizioneStruct(SolidityParser.DefinizioneStructContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneFunzione(@NotNull SolidityParser.DefinizioneFunzioneContext ctx) { }
+	@Override public void exitDefinizioneStruct(SolidityParser.DefinizioneStructContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaDichiarazioneVariabili(@NotNull SolidityParser.ListaDichiarazioneVariabiliContext ctx) { }
+	@Override public void enterDefinizioneCostruttore(SolidityParser.DefinizioneCostruttoreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaDichiarazioneVariabili(@NotNull SolidityParser.ListaDichiarazioneVariabiliContext ctx) { }
+	@Override public void exitDefinizioneCostruttore(SolidityParser.DefinizioneCostruttoreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterTipiDefinitiUtente(@NotNull SolidityParser.TipiDefinitiUtenteContext ctx) { }
+	@Override public void enterDefinizioneModifier(SolidityParser.DefinizioneModifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitTipiDefinitiUtente(@NotNull SolidityParser.TipiDefinitiUtenteContext ctx) { }
+	@Override public void exitDefinizioneModifier(SolidityParser.DefinizioneModifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterNomeTipo(@NotNull SolidityParser.NomeTipoContext ctx) { }
+	@Override public void enterInvocazioneModifier(SolidityParser.InvocazioneModifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitNomeTipo(@NotNull SolidityParser.NomeTipoContext ctx) { }
+	@Override public void exitInvocazioneModifier(SolidityParser.InvocazioneModifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterMapping(@NotNull SolidityParser.MappingContext ctx) { }
+	@Override public void enterDefinizioneFunzione(SolidityParser.DefinizioneFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitMapping(@NotNull SolidityParser.MappingContext ctx) { }
+	@Override public void exitDefinizioneFunzione(SolidityParser.DefinizioneFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterNameValue(@NotNull SolidityParser.NameValueContext ctx) { }
+	@Override public void enterDefinizioneErrore(SolidityParser.DefinizioneErroreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitNameValue(@NotNull SolidityParser.NameValueContext ctx) { }
+	@Override public void exitDefinizioneErrore(SolidityParser.DefinizioneErroreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterVersione(@NotNull SolidityParser.VersioneContext ctx) { }
+	@Override public void enterValoreRitorno(SolidityParser.ValoreRitornoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitVersione(@NotNull SolidityParser.VersioneContext ctx) { }
+	@Override public void exitValoreRitorno(SolidityParser.ValoreRitornoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterImports(@NotNull SolidityParser.ImportsContext ctx) { }
+	@Override public void enterListaModifier(SolidityParser.ListaModifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitImports(@NotNull SolidityParser.ImportsContext ctx) { }
+	@Override public void exitListaModifier(SolidityParser.ListaModifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaExpression(@NotNull SolidityParser.ListaExpressionContext ctx) { }
+	@Override public void enterDefinizioneEvento(SolidityParser.DefinizioneEventoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaExpression(@NotNull SolidityParser.ListaExpressionContext ctx) { }
+	@Override public void exitDefinizioneEvento(SolidityParser.DefinizioneEventoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterTipiPrimitivi(@NotNull SolidityParser.TipiPrimitiviContext ctx) { }
+	@Override public void enterValoreEnum(SolidityParser.ValoreEnumContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitTipiPrimitivi(@NotNull SolidityParser.TipiPrimitiviContext ctx) { }
+	@Override public void exitValoreEnum(SolidityParser.ValoreEnumContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneContratto(@NotNull SolidityParser.DefinizioneContrattoContext ctx) { }
+	@Override public void enterDefinizioneEnum(SolidityParser.DefinizioneEnumContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneContratto(@NotNull SolidityParser.DefinizioneContrattoContext ctx) { }
+	@Override public void exitDefinizioneEnum(SolidityParser.DefinizioneEnumContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterFunctionTypeName(@NotNull SolidityParser.FunctionTypeNameContext ctx) { }
+	@Override public void enterListaParametri(SolidityParser.ListaParametriContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitFunctionTypeName(@NotNull SolidityParser.FunctionTypeNameContext ctx) { }
+	@Override public void exitListaParametri(SolidityParser.ListaParametriContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterPragma(@NotNull SolidityParser.PragmaContext ctx) { }
+	@Override public void enterParametro(SolidityParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitPragma(@NotNull SolidityParser.PragmaContext ctx) { }
+	@Override public void exitParametro(SolidityParser.ParametroContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterInheritanceSpecifier(@NotNull SolidityParser.InheritanceSpecifierContext ctx) { }
+	@Override public void enterListaParametriEvent(SolidityParser.ListaParametriEventContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitInheritanceSpecifier(@NotNull SolidityParser.InheritanceSpecifierContext ctx) { }
+	@Override public void exitListaParametriEvent(SolidityParser.ListaParametriEventContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterIdentificatore(@NotNull SolidityParser.IdentificatoreContext ctx) { }
+	@Override public void enterParametriEvent(SolidityParser.ParametriEventContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitIdentificatore(@NotNull SolidityParser.IdentificatoreContext ctx) { }
+	@Override public void exitParametriEvent(SolidityParser.ParametriEventContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterOperatoriRelazionali(@NotNull SolidityParser.OperatoriRelazionaliContext ctx) { }
+	@Override public void enterListaParametriFunzione(SolidityParser.ListaParametriFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitOperatoriRelazionali(@NotNull SolidityParser.OperatoriRelazionaliContext ctx) { }
+	@Override public void exitListaParametriFunzione(SolidityParser.ListaParametriFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterOperatoreVersione(@NotNull SolidityParser.OperatoreVersioneContext ctx) { }
+	@Override public void enterParametroFunzione(SolidityParser.ParametroFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitOperatoreVersione(@NotNull SolidityParser.OperatoreVersioneContext ctx) { }
+	@Override public void exitParametroFunzione(SolidityParser.ParametroFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterVincoloVersione(@NotNull SolidityParser.VincoloVersioneContext ctx) { }
+	@Override public void enterDichiarazioneVariabile(SolidityParser.DichiarazioneVariabileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitVincoloVersione(@NotNull SolidityParser.VincoloVersioneContext ctx) { }
+	@Override public void exitDichiarazioneVariabile(SolidityParser.DichiarazioneVariabileContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneEnum(@NotNull SolidityParser.DefinizioneEnumContext ctx) { }
+	@Override public void enterNomeTipo(SolidityParser.NomeTipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneEnum(@NotNull SolidityParser.DefinizioneEnumContext ctx) { }
+	@Override public void exitNomeTipo(SolidityParser.NomeTipoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaModifier(@NotNull SolidityParser.ListaModifierContext ctx) { }
+	@Override public void enterTipiDefinitiUtente(SolidityParser.TipiDefinitiUtenteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaModifier(@NotNull SolidityParser.ListaModifierContext ctx) { }
+	@Override public void exitTipiDefinitiUtente(SolidityParser.TipiDefinitiUtenteContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterParametro(@NotNull SolidityParser.ParametroContext ctx) { }
+	@Override public void enterMapping(SolidityParser.MappingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitParametro(@NotNull SolidityParser.ParametroContext ctx) { }
+	@Override public void exitMapping(SolidityParser.MappingContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterIncremento(@NotNull SolidityParser.IncrementoContext ctx) { }
+	@Override public void enterFunctionTypeName(SolidityParser.FunctionTypeNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitIncremento(@NotNull SolidityParser.IncrementoContext ctx) { }
+	@Override public void exitFunctionTypeName(SolidityParser.FunctionTypeNameContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterReturnStatement(@NotNull SolidityParser.ReturnStatementContext ctx) { }
+	@Override public void enterTipoStorage(SolidityParser.TipoStorageContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitReturnStatement(@NotNull SolidityParser.ReturnStatementContext ctx) { }
+	@Override public void exitTipoStorage(SolidityParser.TipoStorageContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterEmitStatement(@NotNull SolidityParser.EmitStatementContext ctx) { }
+	@Override public void enterStateMutability(SolidityParser.StateMutabilityContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitEmitStatement(@NotNull SolidityParser.EmitStatementContext ctx) { }
+	@Override public void exitStateMutability(SolidityParser.StateMutabilityContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterParametriEvent(@NotNull SolidityParser.ParametriEventContext ctx) { }
+	@Override public void enterBlock(SolidityParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitParametriEvent(@NotNull SolidityParser.ParametriEventContext ctx) { }
+	@Override public void exitBlock(SolidityParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterPotenza(@NotNull SolidityParser.PotenzaContext ctx) { }
+	@Override public void enterStatement(SolidityParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitPotenza(@NotNull SolidityParser.PotenzaContext ctx) { }
+	@Override public void exitStatement(SolidityParser.StatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaParametriFunzione(@NotNull SolidityParser.ListaParametriFunzioneContext ctx) { }
+	@Override public void enterExpressionStatement(SolidityParser.ExpressionStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaParametriFunzione(@NotNull SolidityParser.ListaParametriFunzioneContext ctx) { }
+	@Override public void exitExpressionStatement(SolidityParser.ExpressionStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDichiarazioneVariabile(@NotNull SolidityParser.DichiarazioneVariabileContext ctx) { }
+	@Override public void enterIfStatement(SolidityParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDichiarazioneVariabile(@NotNull SolidityParser.DichiarazioneVariabileContext ctx) { }
+	@Override public void exitIfStatement(SolidityParser.IfStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterStatement(@NotNull SolidityParser.StatementContext ctx) { }
+	@Override public void enterWhileStatement(SolidityParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitStatement(@NotNull SolidityParser.StatementContext ctx) { }
+	@Override public void exitWhileStatement(SolidityParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterParteDiContratto(@NotNull SolidityParser.ParteDiContrattoContext ctx) { }
+	@Override public void enterSimpleStatement(SolidityParser.SimpleStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitParteDiContratto(@NotNull SolidityParser.ParteDiContrattoContext ctx) { }
+	@Override public void exitSimpleStatement(SolidityParser.SimpleStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterNomePragma(@NotNull SolidityParser.NomePragmaContext ctx) { }
+	@Override public void enterForStatement(SolidityParser.ForStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitNomePragma(@NotNull SolidityParser.NomePragmaContext ctx) { }
+	@Override public void exitForStatement(SolidityParser.ForStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterPrimaryExpression(@NotNull SolidityParser.PrimaryExpressionContext ctx) { }
+	@Override public void enterDoWhileStatement(SolidityParser.DoWhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitPrimaryExpression(@NotNull SolidityParser.PrimaryExpressionContext ctx) { }
+	@Override public void exitDoWhileStatement(SolidityParser.DoWhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneModifier(@NotNull SolidityParser.DefinizioneModifierContext ctx) { }
+	@Override public void enterContinueStatement(SolidityParser.ContinueStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneModifier(@NotNull SolidityParser.DefinizioneModifierContext ctx) { }
+	@Override public void exitContinueStatement(SolidityParser.ContinueStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterInvocazioneModifier(@NotNull SolidityParser.InvocazioneModifierContext ctx) { }
+	@Override public void enterBreakStatement(SolidityParser.BreakStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitInvocazioneModifier(@NotNull SolidityParser.InvocazioneModifierContext ctx) { }
+	@Override public void exitBreakStatement(SolidityParser.BreakStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneStruct(@NotNull SolidityParser.DefinizioneStructContext ctx) { }
+	@Override public void enterReturnStatement(SolidityParser.ReturnStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneStruct(@NotNull SolidityParser.DefinizioneStructContext ctx) { }
+	@Override public void exitReturnStatement(SolidityParser.ReturnStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterExpression(@NotNull SolidityParser.ExpressionContext ctx) { }
+	@Override public void enterThrowStatement(SolidityParser.ThrowStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitExpression(@NotNull SolidityParser.ExpressionContext ctx) { }
+	@Override public void exitThrowStatement(SolidityParser.ThrowStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaNameValue(@NotNull SolidityParser.ListaNameValueContext ctx) { }
+	@Override public void enterEmitStatement(SolidityParser.EmitStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaNameValue(@NotNull SolidityParser.ListaNameValueContext ctx) { }
+	@Override public void exitEmitStatement(SolidityParser.EmitStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterThrowStatement(@NotNull SolidityParser.ThrowStatementContext ctx) { }
+	@Override public void enterDichiarazioneVariabileStatement(SolidityParser.DichiarazioneVariabileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitThrowStatement(@NotNull SolidityParser.ThrowStatementContext ctx) { }
+	@Override public void exitDichiarazioneVariabileStatement(SolidityParser.DichiarazioneVariabileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDichiarazioneImport(@NotNull SolidityParser.DichiarazioneImportContext ctx) { }
+	@Override public void enterListaDichiarazioneVariabili(SolidityParser.ListaDichiarazioneVariabiliContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDichiarazioneImport(@NotNull SolidityParser.DichiarazioneImportContext ctx) { }
+	@Override public void exitListaDichiarazioneVariabili(SolidityParser.ListaDichiarazioneVariabiliContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneCostruttore(@NotNull SolidityParser.DefinizioneCostruttoreContext ctx) { }
+	@Override public void enterListaIdentifier(SolidityParser.ListaIdentifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneCostruttore(@NotNull SolidityParser.DefinizioneCostruttoreContext ctx) { }
+	@Override public void exitListaIdentifier(SolidityParser.ListaIdentifierContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterForStatement(@NotNull SolidityParser.ForStatementContext ctx) { }
+	@Override public void enterExpression(SolidityParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitForStatement(@NotNull SolidityParser.ForStatementContext ctx) { }
+	@Override public void exitExpression(SolidityParser.ExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterBreakStatement(@NotNull SolidityParser.BreakStatementContext ctx) { }
+	@Override public void enterPrimaryExpression(SolidityParser.PrimaryExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitBreakStatement(@NotNull SolidityParser.BreakStatementContext ctx) { }
+	@Override public void exitPrimaryExpression(SolidityParser.PrimaryExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaIdentifier(@NotNull SolidityParser.ListaIdentifierContext ctx) { }
+	@Override public void enterListaExpression(SolidityParser.ListaExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaIdentifier(@NotNull SolidityParser.ListaIdentifierContext ctx) { }
+	@Override public void exitListaExpression(SolidityParser.ListaExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterIfStatement(@NotNull SolidityParser.IfStatementContext ctx) { }
+	@Override public void enterListaNameValue(SolidityParser.ListaNameValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitIfStatement(@NotNull SolidityParser.IfStatementContext ctx) { }
+	@Override public void exitListaNameValue(SolidityParser.ListaNameValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDefinizioneEvento(@NotNull SolidityParser.DefinizioneEventoContext ctx) { }
+	@Override public void enterNameValue(SolidityParser.NameValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDefinizioneEvento(@NotNull SolidityParser.DefinizioneEventoContext ctx) { }
+	@Override public void exitNameValue(SolidityParser.NameValueContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterDecremento(@NotNull SolidityParser.DecrementoContext ctx) { }
+	@Override public void enterArgomentiChiamataFunzione(SolidityParser.ArgomentiChiamataFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitDecremento(@NotNull SolidityParser.DecrementoContext ctx) { }
+	@Override public void exitArgomentiChiamataFunzione(SolidityParser.ArgomentiChiamataFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterWhileStatement(@NotNull SolidityParser.WhileStatementContext ctx) { }
+	@Override public void enterChiamataFunzione(SolidityParser.ChiamataFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitWhileStatement(@NotNull SolidityParser.WhileStatementContext ctx) { }
+	@Override public void exitChiamataFunzione(SolidityParser.ChiamataFunzioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaParametri(@NotNull SolidityParser.ListaParametriContext ctx) { }
+	@Override public void enterTupleExpression(SolidityParser.TupleExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaParametri(@NotNull SolidityParser.ListaParametriContext ctx) { }
+	@Override public void exitTupleExpression(SolidityParser.TupleExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterArgomentiChiamataFunzione(@NotNull SolidityParser.ArgomentiChiamataFunzioneContext ctx) { }
+	@Override public void enterTipiExpression(SolidityParser.TipiExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitArgomentiChiamataFunzione(@NotNull SolidityParser.ArgomentiChiamataFunzioneContext ctx) { }
+	@Override public void exitTipiExpression(SolidityParser.TipiExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterOperatoriConfrontoDiretto(@NotNull SolidityParser.OperatoriConfrontoDirettoContext ctx) { }
+	@Override public void enterValoreNumerico(SolidityParser.ValoreNumericoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitOperatoriConfrontoDiretto(@NotNull SolidityParser.OperatoriConfrontoDirettoContext ctx) { }
+	@Override public void exitValoreNumerico(SolidityParser.ValoreNumericoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterSimpleStatement(@NotNull SolidityParser.SimpleStatementContext ctx) { }
+	@Override public void enterIdentificatore(SolidityParser.IdentificatoreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitSimpleStatement(@NotNull SolidityParser.SimpleStatementContext ctx) { }
+	@Override public void exitIdentificatore(SolidityParser.IdentificatoreContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterTipiExpression(@NotNull SolidityParser.TipiExpressionContext ctx) { }
+	@Override public void enterTipiPrimitivi(SolidityParser.TipiPrimitiviContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitTipiExpression(@NotNull SolidityParser.TipiExpressionContext ctx) { }
+	@Override public void exitTipiPrimitivi(SolidityParser.TipiPrimitiviContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterOperatoriMoltiplicazione(@NotNull SolidityParser.OperatoriMoltiplicazioneContext ctx) { }
+	@Override public void enterIncremento(SolidityParser.IncrementoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitOperatoriMoltiplicazione(@NotNull SolidityParser.OperatoriMoltiplicazioneContext ctx) { }
+	@Override public void exitIncremento(SolidityParser.IncrementoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterListaParametriEvent(@NotNull SolidityParser.ListaParametriEventContext ctx) { }
+	@Override public void enterDecremento(SolidityParser.DecrementoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitListaParametriEvent(@NotNull SolidityParser.ListaParametriEventContext ctx) { }
+	@Override public void exitDecremento(SolidityParser.DecrementoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterValorePragma(@NotNull SolidityParser.ValorePragmaContext ctx) { }
+	@Override public void enterOperatoriSomma(SolidityParser.OperatoriSommaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitValorePragma(@NotNull SolidityParser.ValorePragmaContext ctx) { }
+	@Override public void exitOperatoriSomma(SolidityParser.OperatoriSommaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterValoreRitorno(@NotNull SolidityParser.ValoreRitornoContext ctx) { }
+	@Override public void enterPotenza(SolidityParser.PotenzaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitValoreRitorno(@NotNull SolidityParser.ValoreRitornoContext ctx) { }
+	@Override public void exitPotenza(SolidityParser.PotenzaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterContinueStatement(@NotNull SolidityParser.ContinueStatementContext ctx) { }
+	@Override public void enterOperatoriMoltiplicazione(SolidityParser.OperatoriMoltiplicazioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitContinueStatement(@NotNull SolidityParser.ContinueStatementContext ctx) { }
+	@Override public void exitOperatoriMoltiplicazione(SolidityParser.OperatoriMoltiplicazioneContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterOperatoriSomma(@NotNull SolidityParser.OperatoriSommaContext ctx) { }
+	@Override public void enterOperatoriRelazionali(SolidityParser.OperatoriRelazionaliContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitOperatoriSomma(@NotNull SolidityParser.OperatoriSommaContext ctx) { }
+	@Override public void exitOperatoriRelazionali(SolidityParser.OperatoriRelazionaliContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterSourceUnit(@NotNull SolidityParser.SourceUnitContext ctx) { }
+	@Override public void enterOperatoriConfrontoDiretto(SolidityParser.OperatoriConfrontoDirettoContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitSourceUnit(@NotNull SolidityParser.SourceUnitContext ctx) { }
+	@Override public void exitOperatoriConfrontoDiretto(SolidityParser.OperatoriConfrontoDirettoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOperatoriAssegnazione(SolidityParser.OperatoriAssegnazioneContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOperatoriAssegnazione(SolidityParser.OperatoriAssegnazioneContext ctx) { }
 
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void enterEveryRule(@NotNull ParserRuleContext ctx) { }
+	@Override public void enterEveryRule(ParserRuleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void exitEveryRule(@NotNull ParserRuleContext ctx) { }
+	@Override public void exitEveryRule(ParserRuleContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void visitTerminal(@NotNull TerminalNode node) { }
+	@Override public void visitTerminal(TerminalNode node) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	 public void visitErrorNode(@NotNull ErrorNode node) { }
+	@Override public void visitErrorNode(ErrorNode node) { }
 }
