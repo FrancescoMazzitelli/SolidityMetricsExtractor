@@ -17,6 +17,7 @@
 Componenti del gruppo:
 - Francesco Cosimo Mazzitelli
 - Jessica Cinelli
+- Francesco Saccone
 
 ## Requisiti
 Per poter eseguire l'applicazione è necessario:
