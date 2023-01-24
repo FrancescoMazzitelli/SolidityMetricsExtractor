@@ -29,7 +29,7 @@ public class SolidityParser extends Parser {
 		T__66=67, T__67=68, T__68=69, T__69=70, T__70=71, T__71=72, T__72=73, 
 		T__73=74, T__74=75, T__75=76, T__76=77, T__77=78, T__78=79, T__79=80, 
 		T__80=81, VersionLiteral=82, LiteralBooleano=83, NumeroDecimale=84, NumeroEsadecimale=85, 
-		Unit‡Numero=86, LiteralEsadecimale=87, ReservedKeyword=88, AnonymousKeyword=89, 
+		UnitaNumero=86, LiteralEsadecimale=87, ReservedKeyword=88, AnonymousKeyword=89, 
 		BreakKeyword=90, ConstantKeyword=91, ContinueKeyword=92, ExternalKeyword=93, 
 		IndexedKeyword=94, InternalKeyword=95, PayableKeyword=96, PrivateKeyword=97, 
 		PublicKeyword=98, PureKeyword=99, TypeKeyword=100, ViewKeyword=101, Int=102, 
@@ -5417,7 +5417,7 @@ public class SolidityParser extends Parser {
 	public static class ValoreNumericoContext extends ParserRuleContext {
 		public TerminalNode NumeroDecimale() { return getToken(SolidityParser.NumeroDecimale, 0); }
 		public TerminalNode NumeroEsadecimale() { return getToken(SolidityParser.NumeroEsadecimale, 0); }
-		public TerminalNode Unit‡Numero() { return getToken(SolidityParser.Unit‡Numero, 0); }
+		public TerminalNode UnitaNumero() { return getToken(SolidityParser.UnitaNumero, 0); }
 		public ValoreNumericoContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
@@ -5460,7 +5460,7 @@ public class SolidityParser extends Parser {
 			case 1:
 				{
 				setState(811);
-				match(Unit‡Numero);
+				match(UnitaNumero);
 				}
 				break;
 			}

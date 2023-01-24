@@ -28,7 +28,7 @@ public class SolidityParser extends Parser {
 		T__15=66, T__14=67, T__13=68, T__12=69, T__11=70, T__10=71, T__9=72, T__8=73, 
 		T__7=74, T__6=75, T__5=76, T__4=77, T__3=78, T__2=79, T__1=80, T__0=81, 
 		VersionLiteral=82, LiteralBooleano=83, NumeroDecimale=84, NumeroEsadecimale=85, 
-		Unit�Numero=86, LiteralEsadecimale=87, ReservedKeyword=88, AnonymousKeyword=89, 
+		UnitaNumero=86, LiteralEsadecimale=87, ReservedKeyword=88, AnonymousKeyword=89, 
 		BreakKeyword=90, ConstantKeyword=91, ContinueKeyword=92, ExternalKeyword=93, 
 		IndexedKeyword=94, InternalKeyword=95, PayableKeyword=96, PrivateKeyword=97, 
 		PublicKeyword=98, PureKeyword=99, TypeKeyword=100, ViewKeyword=101, Int=102, 
@@ -46,7 +46,7 @@ public class SolidityParser extends Parser {
 		"'['", "'contract'", "'=='", "'--'", "'|'", "'address'", "'bool'", "'>'", 
 		"'!'", "'=>'", "'string'", "'%'", "'modifier'", "'else'", "')'", "'-'", 
 		"'import'", "VersionLiteral", "LiteralBooleano", "NumeroDecimale", "NumeroEsadecimale", 
-		"Unit�Numero", "LiteralEsadecimale", "ReservedKeyword", "'anonymous'", 
+		"UnitaNumero", "LiteralEsadecimale", "ReservedKeyword", "'anonymous'", 
 		"'break'", "'constant'", "'continue'", "'external'", "'indexed'", "'internal'", 
 		"'payable'", "'private'", "'public'", "'pure'", "'type'", "'view'", "Int", 
 		"Uint", "Byte", "Fixed", "Ufixed", "Identifier", "'&&'", "'||'", "LiteralStringa", 
@@ -4614,7 +4614,7 @@ public class SolidityParser extends Parser {
 	}
 
 	public static class ValoreNumericoContext extends ParserRuleContext {
-		public TerminalNode Unit�Numero() { return getToken(SolidityParser.Unit�Numero, 0); }
+		public TerminalNode UnitaNumero() { return getToken(SolidityParser.UnitaNumero, 0); }
 		public TerminalNode NumeroDecimale() { return getToken(SolidityParser.NumeroDecimale, 0); }
 		public TerminalNode NumeroEsadecimale() { return getToken(SolidityParser.NumeroEsadecimale, 0); }
 		public ValoreNumericoContext(ParserRuleContext parent, int invokingState) {
@@ -4648,7 +4648,7 @@ public class SolidityParser extends Parser {
 			switch ( getInterpreter().adaptivePredict(_input,90,_ctx) ) {
 			case 1:
 				{
-				setState(811); match(Unit�Numero);
+				setState(811); match(UnitaNumero);
 				}
 				break;
 			}

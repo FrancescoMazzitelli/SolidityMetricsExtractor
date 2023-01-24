@@ -33,8 +33,8 @@ import extractor.symbolTable.SymbolTable;
 
 public class Main {
 	
-	public static File input_dir = new File("C:\\Users\\panne\\eclipse-workspace1\\SolidityMetricsExtractor\\INPUT");
-	public static String output_dir = "C:\\Users\\panne\\eclipse-workspace1\\SolidityMetricsExtractor\\OUTPUT";
+	public static File input_dir = new File("C:\\Users\\jessi\\Desktop\\LiPC\\SolidityMetricsExtractor\\contracts");
+	public static String output_dir = "C:\\Users\\jessi\\Desktop\\LiPC\\SolidityMetricsExtractor\\OUTPUT";
 
 	/**
 	 * Funzione adibita alla lettura di un file, specificandone il path
@@ -81,9 +81,9 @@ public class Main {
 				 * Per ogni file contenuto nella directory INPUT, viene effettuata una
 				 * operazione di lettura e di successiva generazione della stringa "contractCode".
 				 * La stringa viene convertita in uno stream di caratteri e passata come argomento
-				 * al lexer, che effettuerà un'operazione di tokenizzazione del testo. I token
+				 * al lexer, che effettuerï¿½ un'operazione di tokenizzazione del testo. I token
 				 * generati dal lexer verranno poi convertiti in uno stream di token che a sua
-				 * volta verrà passato al parser per la generazione di un albero di derivazione
+				 * volta verrï¿½ passato al parser per la generazione di un albero di derivazione
 				 ********************************************************************************/
 	            
 				for (String solPath : solPaths) {
@@ -117,7 +117,7 @@ public class Main {
 					List<String> ruleNamesList = Arrays.asList(parser.getRuleNames());
 					ParseTree tree = parser.sourceUnit();
 					table.populateMap(tree, ruleNamesList);
-					table.printTable();
+					//table.printTable();
 					
 					parser.reset();
 					
@@ -130,9 +130,9 @@ public class Main {
 					/*****************************************************************************************
 					 * Viene quindi chiamato il main visitor, componente che detiene la logica relativa
 					 * all'estrazione delle metriche. Tramite la chiamata al metodo "visit" della superclasse
-					 * AbstractParseTreevisitor, viene attraversato il parseTree il cui nodo radice è
+					 * AbstractParseTreevisitor, viene attraversato il parseTree il cui nodo radice ï¿½
 					 * contrassegnato dal metodo sourceUnit() che indica l'inizio della grammatica. Vengono
-					 * quindi estratte le metriche e salvate in una lista chiamata record. Questa lista verrà
+					 * quindi estratte le metriche e salvate in una lista chiamata record. Questa lista verrï¿½
 					 * poi salvata nella sua interezza sul file CSV. Questa operazione viene svolta per ogni
 					 * file in input.				 * 
 					 ****************************************************************************************/
@@ -140,8 +140,9 @@ public class Main {
 					MainVisitor visitor = new MainVisitor(contractCode);
 					visitor.visit(parser.sourceUnit());
 					Map<DefinizioneContrattoContext, Integer[]> metrics = visitor.getMetricMap();
-					ArrayList<Object> record = new ArrayList<Object>();
+
 					for(DefinizioneContrattoContext contract : metrics.keySet()) {
+						ArrayList<Object> record = new ArrayList<Object>();
 						record.add(new File(solPath).getName());
 						record.add(contract.getChild(1).getText());
 						record.add(contract.getChild(0).getText());
