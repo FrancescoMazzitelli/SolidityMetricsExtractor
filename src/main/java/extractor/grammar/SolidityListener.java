@@ -1,5 +1,6 @@
 // Generated from Solidity.g4 by ANTLR 4.7.1
 package extractor.grammar;
+
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -668,6 +669,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 */
 	void exitTipiPrimitivi(SolidityParser.TipiPrimitiviContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SolidityParser#array}.
+	 * @param ctx the parse tree
+	 */
+	void enterArray(SolidityParser.ArrayContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#array}.
+	 * @param ctx the parse tree
+	 */
+	void exitArray(SolidityParser.ArrayContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SolidityParser#incremento}.
 	 * @param ctx the parse tree
 	 */
@@ -737,6 +748,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitOperatoriConfrontoDiretto(SolidityParser.OperatoriConfrontoDirettoContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#puntoVirgola}.
+	 * @param ctx the parse tree
+	 */
+	void enterPuntoVirgola(SolidityParser.PuntoVirgolaContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#puntoVirgola}.
+	 * @param ctx the parse tree
+	 */
+	void exitPuntoVirgola(SolidityParser.PuntoVirgolaContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#operatoriAssegnazione}.
 	 * @param ctx the parse tree

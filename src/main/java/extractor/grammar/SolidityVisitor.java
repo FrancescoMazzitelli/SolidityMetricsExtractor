@@ -1,5 +1,6 @@
 // Generated from Solidity.g4 by ANTLR 4.7.1
 package extractor.grammar;
+
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -407,6 +408,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTipiPrimitivi(SolidityParser.TipiPrimitiviContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link SolidityParser#array}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitArray(SolidityParser.ArrayContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SolidityParser#incremento}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -448,6 +455,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitOperatoriConfrontoDiretto(SolidityParser.OperatoriConfrontoDirettoContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#puntoVirgola}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPuntoVirgola(SolidityParser.PuntoVirgolaContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#operatoriAssegnazione}.
 	 * @param ctx the parse tree

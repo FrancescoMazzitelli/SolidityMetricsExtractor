@@ -1,5 +1,6 @@
 // Generated from Solidity.g4 by ANTLR 4.7.1
 package extractor.grammar;
+
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -807,6 +808,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterArray(SolidityParser.ArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitArray(SolidityParser.ArrayContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterIncremento(SolidityParser.IncrementoContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -886,6 +899,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitOperatoriConfrontoDiretto(SolidityParser.OperatoriConfrontoDirettoContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterPuntoVirgola(SolidityParser.PuntoVirgolaContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitPuntoVirgola(SolidityParser.PuntoVirgolaContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

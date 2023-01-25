@@ -8,7 +8,7 @@ sourceUnit
 
 //-----------------------PRAGMA-----------------------//
 pragma
-  : 'pragma' nomePragma valorePragma ';' ;
+  : 'pragma' nomePragma valorePragma puntoVirgola ;
 
 nomePragma
   : identificatore ;
@@ -32,9 +32,9 @@ dichiarazioneImport
   : identificatore ('as' identificatore)? ;
 
 imports
-  : 'import' LiteralStringa ('as' identificatore)? ';'
-  | 'import' ('*' | identificatore) ('as' identificatore)? 'from' LiteralStringa ';'
-  | 'import' '{' dichiarazioneImport ( ',' dichiarazioneImport )* '}' 'from' LiteralStringa ';' ;
+  : 'import' LiteralStringa ('as' identificatore)? puntoVirgola
+  | 'import' ('*' | identificatore) ('as' identificatore)? 'from' LiteralStringa puntoVirgola
+  | 'import' '{' dichiarazioneImport ( ',' dichiarazioneImport )* '}' 'from' LiteralStringa puntoVirgola ;
 //----------------------------------------------------//
 
 
@@ -61,14 +61,14 @@ parteDiContratto
 assegnazioneVariabile
   : nomeTipo
     ( PublicKeyword | InternalKeyword | PrivateKeyword | ConstantKeyword )*
-    identificatore ('=' expression)? ';' ;
+    identificatore ('=' expression)? puntoVirgola ;
 
 usingForDeclaration
-  : 'using' identificatore 'for' ('*' | nomeTipo) ';' ;
+  : 'using' identificatore 'for' ('*' | nomeTipo) puntoVirgola ;
 
 definizioneStruct
   : 'struct' identificatore
-    '{' ( dichiarazioneVariabile ';' (dichiarazioneVariabile ';')* )? '}' ;
+    '{' ( dichiarazioneVariabile puntoVirgola (dichiarazioneVariabile puntoVirgola)* )? '}' ;
 
 definizioneCostruttore
   : 'constructor' listaParametri listaModifier block ;
@@ -80,10 +80,10 @@ invocazioneModifier
   : identificatore ( '(' listaExpression? ')' )? ;
 
 definizioneFunzione
-  : 'function' identificatore? listaParametri listaModifier valoreRitorno? ( ';' | block ) ;
+  : 'function' identificatore? listaParametri listaModifier valoreRitorno? ( puntoVirgola | block ) ;
 
 definizioneErrore
-  : 'error' identificatore? listaParametri ';' ;
+  : 'error' identificatore? listaParametri puntoVirgola ;
   
 valoreRitorno
   : 'returns' listaParametri ;
@@ -93,7 +93,7 @@ listaModifier
     | PublicKeyword | InternalKeyword | PrivateKeyword )* ;
 
 definizioneEvento
-  : 'event' identificatore listaParametriEvent AnonymousKeyword? ';' ;
+  : 'event' identificatore listaParametriEvent AnonymousKeyword? puntoVirgola ;
 
 valoreEnum
   : identificatore ;
@@ -167,7 +167,7 @@ statement
   | simpleStatement ;
 
 expressionStatement
-  : expression ';' ;
+  : expression puntoVirgola ;
 
 ifStatement
   : 'if' '(' expression ')' statement ( 'else' statement )? ;
@@ -179,28 +179,28 @@ simpleStatement
   : ( dichiarazioneVariabileStatement | expressionStatement ) ;
 
 forStatement
-  : 'for' '(' ( simpleStatement | ';' ) ( expressionStatement | ';' ) expression? ')' statement ;
+  : 'for' '(' ( simpleStatement | puntoVirgola ) ( expressionStatement | puntoVirgola ) expression? ')' statement ;
 
 doWhileStatement
-  : 'do' statement 'while' '(' expression ')' ';' ;
+  : 'do' statement 'while' '(' expression ')' puntoVirgola ;
 
 continueStatement
-  : 'continue' ';' ;
+  : 'continue' puntoVirgola ;
 
 breakStatement
-  : 'break' ';' ;
+  : 'break' puntoVirgola ;
 
 returnStatement
-  : 'return' expression? ';' ;
+  : 'return' expression? puntoVirgola ;
 
 throwStatement
-  : 'throw' ';' ;
+  : 'throw' puntoVirgola ;
 
 emitStatement
-  : 'emit' chiamataFunzione ';' ;
+  : 'emit' chiamataFunzione puntoVirgola ;
 
 dichiarazioneVariabileStatement
-  : ( 'var' listaIdentifier | dichiarazioneVariabile | '(' listaDichiarazioneVariabili ')' ) ( '=' expression )? ';';
+  : ( 'var' listaIdentifier | dichiarazioneVariabile | '(' listaDichiarazioneVariabili ')' ) ( '=' expression )? puntoVirgola;
 
 listaDichiarazioneVariabili
   : dichiarazioneVariabile? (',' dichiarazioneVariabile? )* ;
@@ -221,7 +221,7 @@ expression
   | ( incremento | decremento ) expression
   | ( operatoriSomma ) expression
   | ('after' | 'delete') expression
-  | '!' expression
+  | NOT expression
   | '~' expression
   | expression potenza expression
   | expression ( operatoriMoltiplicazione ) expression
@@ -280,7 +280,7 @@ tipiExpression
 
 //-------------------VALORI-NUMERICI------------------//
 valoreNumerico
-  : (NumeroDecimale | NumeroEsadecimale) Unit‡Numero? ;
+  : (NumeroDecimale | NumeroEsadecimale) UnitaNumero? ;
 
 identificatore
   : ('from' | 'calldata' | Identifier) ;
@@ -305,7 +305,7 @@ fragment
 DigitEsadecimali
   : CarattereEsadecimale ( '_'? CarattereEsadecimale )* ;
 
-Unit‡Numero
+UnitaNumero
   : 'wei' | 'szabo' | 'finney' | 'ether'
   | 'seconds' | 'minutes' | 'hours' | 'days' | 'weeks' | 'years' ;
 
@@ -375,6 +375,9 @@ Fixed
 
 Ufixed
   : 'ufixed' | ( 'ufixed' [0-9]+ 'x' [0-9]+ ) ;
+
+array
+  : tipiPrimitivi '[' ']' ;
 //----------------------------------------------------//
 
 
@@ -408,6 +411,12 @@ AND
 
 OR
   : '||' ;
+
+NOT
+  : '!' ;
+
+puntoVirgola
+  : ';' ;
 
 operatoriAssegnazione
   : '=' | '|=' | '^=' | '&=' | '<<=' | '>>=' | '+=' | '-=' | '*=' | '/=' | '%=' ;
