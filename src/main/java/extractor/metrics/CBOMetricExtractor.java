@@ -12,7 +12,7 @@ import extractor.grammar.SolidityParser.*;
 @SuppressWarnings("deprecation")
 public class CBOMetricExtractor extends SolidityBaseVisitor<Integer> {
 
-	private boolean pre_flight = false;
+	private boolean flag = false;
 	private Set<String> contractIds = new HashSet<String>();
 	private Set<String> alreadyCounted = new HashSet<String>();
 	int cbo = 0;
@@ -24,7 +24,7 @@ public class CBOMetricExtractor extends SolidityBaseVisitor<Integer> {
 	 * @param ctx
 	 */
 	public void start(SourceUnitContext ctx) {
-		pre_flight = true;
+		flag = false;
 		visitSourceUnit(ctx);
 	}
 
@@ -35,7 +35,7 @@ public class CBOMetricExtractor extends SolidityBaseVisitor<Integer> {
 	 * @return
 	 */
 	public int calculateCBO(@NotNull DefinizioneContrattoContext ctx) {
-		pre_flight = false;
+		flag = true;
 		return visitDefinizioneContratto(ctx);
 	}
 
@@ -46,12 +46,14 @@ public class CBOMetricExtractor extends SolidityBaseVisitor<Integer> {
 	 */
 	@Override
 	public Integer visitDefinizioneContratto(@NotNull DefinizioneContrattoContext ctx) {
-		if (pre_flight) {
+		
+		if (flag) {
 			contractIds.add(ctx.identificatore().getText());
 		} else {
 			cbo = 0;
 			alreadyCounted.clear();
 		}
+		super.visitDefinizioneContratto(ctx);
 		return cbo;
 	}
 	
