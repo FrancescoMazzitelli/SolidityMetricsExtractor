@@ -75,7 +75,8 @@ public class Main {
 			try (BufferedWriter writer = new BufferedWriter(new FileWriter(output_dir+"\\metrics.csv"));
 					CSVPrinter csvPrinter = new CSVPrinter(writer,
 							CSVFormat.EXCEL.withHeader("SolidityFile", "ContractName", "Type", 
-											"SLOC", "CLOC", "McCC", "NOS", "CBO", "DIT"))) {
+											"SLOC", "CLOC", "McCC", "NOS", "CBO", "DIT", "N_contr", 
+											"N_lib", "N_inter", "N_totElem"))) {
 	            
 				/*********************************************************************************
 				 * Per ogni file contenuto nella directory INPUT, viene effettuata una
@@ -114,17 +115,17 @@ public class Main {
 					
 					SolidityParser parser = new SolidityParser(tokens);
 					
+					/*SymbolTable*/
 					//List<String> ruleNamesList = Arrays.asList(parser.getRuleNames());
 					//ParseTree tree = parser.sourceUnit();
 					//table.populateMap(tree, ruleNamesList);
 					//table.printTable();
-					
 					//parser.reset();
 					
+					/*Albero di derivazione*/
 					//TreePlotter.getRules(parser);
 					//TreePlotter.createParseTree(parser);
 					//TreePlotter.plot(); //<- Funzione che stampa l'albero di derivazione
-					
 					//parser.reset();
 				
 					/*****************************************************************************************
@@ -140,6 +141,17 @@ public class Main {
 					MainVisitor visitor = new MainVisitor(contractCode);
 					visitor.visit(parser.sourceUnit());
 					Map<DefinizioneContrattoContext, Integer[]> metrics = visitor.getMetricMap();
+					
+					int n_contratti = 0;
+					int n_librerie = 0;
+					int n_interfacce = 0;
+
+					for(DefinizioneContrattoContext numero : metrics.keySet()){
+						if(numero.getChild(0).getText().equalsIgnoreCase("CONTRACT")) n_contratti++;
+						if(numero.getChild(0).getText().equalsIgnoreCase("LIBRARY")) n_librerie++;
+						if(numero.getChild(0).getText().equalsIgnoreCase("INTERFACE")) n_interfacce++;
+
+					}
 
 					for(DefinizioneContrattoContext contract : metrics.keySet()) {
 						ArrayList<Object> record = new ArrayList<Object>();
@@ -147,6 +159,10 @@ public class Main {
 						record.add(contract.getChild(1).getText());
 						record.add(contract.getChild(0).getText());
 						record.addAll(Arrays.asList(metrics.get(contract)));
+						record.add(n_contratti);
+						record.add(n_librerie);
+						record.add(n_interfacce);
+						record.add(n_contratti + n_librerie + n_interfacce);
 						csvPrinter.printRecord(record);
 						csvPrinter.flush();
 					}

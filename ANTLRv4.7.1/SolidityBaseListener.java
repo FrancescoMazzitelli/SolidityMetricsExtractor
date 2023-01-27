@@ -1,5 +1,4 @@
 // Generated from Solidity.g4 by ANTLR 4.7.1
-package extractor.grammar;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;

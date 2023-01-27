@@ -64,8 +64,8 @@ public class MainVisitor extends SolidityBaseVisitor<Void> {
 	/**
 	 * Metodo che calcola la DIT.
 	 * Viene prelevato dal contesto di definizione del Contract (Header script .SOL)
-	 * lo specificatore di ereditarietà. Se lo specificatore corrente  ha un valore
-	 * di profondità maggiore del precedente, la metrica DIT viene aggiornata
+	 * lo specificatore di ereditarieta. Se lo specificatore corrente  ha un valore
+	 * di profondita maggiore del precedente, la metrica DIT viene aggiornata
 	 * 
 	 * @param ctx
 	 * @return
@@ -86,7 +86,7 @@ public class MainVisitor extends SolidityBaseVisitor<Void> {
 	 * Metodo che estende quanto definito in SolidityBaseVisitor, quando il visitor
 	 * arriva a tale metodo il contenuto viene aggiornato con quanto definito in
 	 * questa classe.
-	 * Siccome si basa sul calcolo della complessità ciclomatica, questo parametro
+	 * Siccome si basa sul calcolo della complessita ciclomatica, questo parametro
 	 * viene incrementato ogni volta che si entra in un contesto di definizione di
 	 * una funzione durante la visita del ParseTree
 	 */
